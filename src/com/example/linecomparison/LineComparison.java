@@ -19,11 +19,13 @@ public class LineComparison {
     }
 
     static void compareLines(Double x, Double y){
-        Boolean bool = x.equals(y);
-        if(bool) {
-            System.out.println("Lines are equal");
-        }else {
-            System.out.println("Lines are distinct");
+        int netResult = x.compareTo(y);
+        if(netResult > 0) {
+            System.out.println("Line one is greater than Line two");
+        } else if(netResult< 0) {
+            System.out.println("Line one is less than Line two");
+        } else {
+            System.out.println("Line one is equal to Line two");
         }
     }
 
